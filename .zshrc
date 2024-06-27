@@ -102,7 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PROMPT='%{$fg_bold[blue]%}%1~%{$reset_color%} $(git_prompt_info) $(git_remote_status)
+PROMPT='
+%{$fg_bold[blue]%}@ %1~%{$reset_color%} $(git_prompt_info) $(git_remote_status)
 %{$fg_bold[cyan]%}❯%{$reset_color%} '
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -11,3 +11,9 @@
     4. copypath - copies current path to clipboard 
     5. copyfile - copies selected file content to clipboard
     https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#homebrew
+
+## Other tools
+    1. fzf - sudo apt install fzf
+    2. bat (cat alternative) - brew install bat
+    3. eza (ls alternative) - brew install eza
+    4. tldr (man but easier to understand) - brew install tlrc (not tldr)

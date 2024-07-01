@@ -110,3 +110,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source /home/mateusz/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias cat='bat'
 alias ls='eza --color=always --long --git --no-time --header'
+alias tree='eza --tree --level=2'

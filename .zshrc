@@ -70,7 +70,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search history-substring-search zsh-autosuggestions copypath copyfile)
+plugins=(git web-search history-substring-search copypath copyfile)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,7 +107,7 @@ PROMPT='
 %{$fg_bold[cyan]%}❯%{$reset_color%} '
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-source /home/mateusz/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias cat='bat'
 alias ls='eza --color=always --long --git --no-time --header'
 alias tree='eza --tree --level=2'

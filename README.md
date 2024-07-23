@@ -1,6 +1,6 @@
 # zsh with oh-my-zsh configuration
 
-***[Step by step instructions](https://github.com/all0ver/zsh/blob/main/install.md)***
+## ***[Step by step instructions](https://github.com/all0ver/zsh/blob/main/install.md)***
 
 ***theme based on ['intheloop'](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/intheloop.zsh-theme) theme but minimalized***
 

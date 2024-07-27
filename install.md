@@ -35,7 +35,7 @@
     - `brew install zsh-autosuggestions`
 11. Installing zsh-syntax-highlighing
 
-    - `sudo apt intall zsh-syntax-highlighting`
+    - `sudo apt install zsh-syntax-highlighting`
     - `echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc` 
     - if this doesn't work, follow these [instructions](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 12. Clone zsh repository using git

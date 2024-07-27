@@ -112,3 +112,4 @@ alias cat='bat'
 alias ls='eza --color=always --long --git --no-time --header'
 alias tree='eza --tree --level=2'
 alias status='git status'
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

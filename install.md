@@ -50,6 +50,10 @@
     `brew install eza`
     
     `brew install tlrc`
+
+    'sudo apt install trash-cli'
+
+    ! trash-cli might need some extra steps check [here](https://github.com/andreafrancia/trash-cli)
 15. Change your .zshrc file with .zshrc from this repository
 
     `mv .zshrc .zshrc.backup`

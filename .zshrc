@@ -117,3 +117,6 @@ alias zed='~/.local/bin/zed'
 alias b='brave-browser'
 alias add='git add *'
 alias rm='trash'
+alias c='clear'
+export PATH="$PATH:/opt/nvim-linux64/bin"
+alias wezterm='flatpak run org.wezfurlong.wezterm'

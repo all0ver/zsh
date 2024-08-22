@@ -10,9 +10,8 @@
 
     1. zsh-autosuggestions
     2. zsh-syntax-highlighting
-    3. web-search - you can search directly in your terminal
-    4. copypath - copies current path to clipboard 
-    5. copyfile - copies selected file content to clipboard
+    3. copypath - copies current path to clipboard 
+    4. copyfile - copies selected file content to clipboard
 
 
 [zsh-autosuggestions step-by-step](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#homebrew)

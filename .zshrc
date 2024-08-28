@@ -111,12 +111,27 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias cat='bat'
 alias ls='eza --color=always --long --git --no-time --header'
 alias tree='eza --tree --level=2'
-alias status='git status'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias zed='~/.local/bin/zed'
 alias b='brave-browser'
-alias add='git add *'
+alias add='git add * ; git status'
+alias status='git status'
 alias rm='trash'
 alias c='clear'
-export PATH="$PATH:/opt/nvim-linux64/bin"
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias shutdown='shutdown now'
+export PATH="$PATH:/opt/nvim-linux64/bin"
+# Ensure no conflicting alias
+unalias cd 2>/dev/null
+
+# Define the function
+cd() {
+  # Log the current directory at the top of ~/.cd_log.txt
+  {
+    echo "$PWD"
+    cat ~/.cd_log.txt
+  } > ~/.temp_log.txt && mv ~/.temp_log.txt ~/.cd_log.txt
+  
+  # Execute the original cd command
+  builtin cd "$@"
+}

@@ -120,6 +120,8 @@ alias rm='trash'
 alias c='clear'
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 alias shutdown='shutdown now'
+alias x='exit'
+alias dev='npm run dev'
 export PATH="$PATH:/opt/nvim-linux64/bin"
 # Ensure no conflicting alias
 unalias cd 2>/dev/null

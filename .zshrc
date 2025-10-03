@@ -70,7 +70,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search history-substring-search copypath copyfile)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,11 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -101,39 +101,12 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv) alias ohmyzsh="mate ~/.oh-my-zsh"
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 PROMPT='
 %{$fg_bold[blue]%}@ %1~%{$reset_color%} $(git_prompt_info) $(git_remote_status)
 %{$fg_bold[cyan]%}❯%{$reset_color%} '
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias cat='bat'
 alias ls='eza --color=always --long --git --no-time --header'
-alias tree='eza --tree --level=2'
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-alias zed='~/.local/bin/zed'
-alias b='brave-browser'
-alias add='git add * ; git status'
-alias status='git status'
-alias rm='trash'
-alias c='clear'
-alias wezterm='flatpak run org.wezfurlong.wezterm'
-alias shutdown='shutdown now'
-alias x='exit'
-alias dev='npm run dev'
-export PATH="$PATH:/opt/nvim-linux64/bin"
-# Ensure no conflicting alias
-unalias cd 2>/dev/null
 
-# Define the function
-cd() {
-  # Log the current directory at the top of ~/.cd_log.txt
-  {
-    echo "$PWD"
-    cat ~/.cd_log.txt
-  } > ~/.temp_log.txt && mv ~/.temp_log.txt ~/.cd_log.txt
-  
-  # Execute the original cd command
-  builtin cd "$@"
-}

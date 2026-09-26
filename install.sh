@@ -52,7 +52,7 @@ fi
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" 2>/dev/null || true
 
 # ─── 4. Brew packages ──────────────────────────
-for pkg in bat eza zsh-autosuggestions; do
+for pkg in bat eza zsh-autosuggestions neovim; do
     if brew list "$pkg" &>/dev/null; then
         warn "$pkg already installed, skipping"
     else
@@ -61,7 +61,13 @@ for pkg in bat eza zsh-autosuggestions; do
     fi
 done
 
-# ─── 5. oh-my-zsh ──────────────────────────────
+# ─── 5. Neovim config ──────────────────────────
+NVIM_CONFIG_DIR="$HOME/.config/nvim"
+mkdir -p "$NVIM_CONFIG_DIR"
+info "Copying nvim/init.lua..."
+cp "$REPO_DIR/nvim/init.lua" "$NVIM_CONFIG_DIR/init.lua"
+
+# ─── 6. oh-my-zsh ──────────────────────────────
 if [ -d "$HOME/.oh-my-zsh" ]; then
     warn "oh-my-zsh already installed, skipping"
 else
@@ -71,7 +77,7 @@ else
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# ─── 6. Apply .zshrc ───────────────────────────
+# ─── 7. Apply .zshrc ───────────────────────────
 if [ -f "$HOME/.zshrc" ]; then
     warn "Backing up existing .zshrc to .zshrc.backup"
     cp "$HOME/.zshrc" "$HOME/.zshrc.backup"

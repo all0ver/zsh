@@ -31,6 +31,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/all0ver/zsh/main/install.sh)
 | zsh-autosuggestions | `brew` |
 | [bat](https://github.com/sharkdp/bat) — `cat` alternative | `brew` |
 | [eza](https://github.com/eza-community/eza) — `ls` alternative | `brew` |
+| [neovim](https://neovim.io) — latest stable | `brew` |
 | [oh-my-zsh](https://ohmyzsh.sh) | official install script |
 
 The script is **idempotent** — safe to re-run; already-installed tools are skipped.

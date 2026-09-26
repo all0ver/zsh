@@ -10,17 +10,13 @@
 
     1. zsh-autosuggestions
     2. zsh-syntax-highlighting
-    3. copypath - copies current path to clipboard 
-    4. copyfile - copies selected file content to clipboard
 
 
 [zsh-autosuggestions step-by-step](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#homebrew)
 
-[zsh-syntax-hightlighting step-by-step](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+[zsh-syntax-highlighting step-by-step](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 **Other tools**
 
-    1. fzf - sudo apt install fzf
-    2. bat (cat alternative) - brew install bat
-    3. eza (ls alternative) - brew install eza
-    4. tldr (man but easier to understand) - brew install tlrc (not tldr)
+    1. bat (cat alternative) - brew install bat
+    2. eza (ls alternative) - brew install eza
